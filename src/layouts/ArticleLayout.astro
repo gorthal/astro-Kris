@@ -1,0 +1,50 @@
+---
+// src/layouts/ArticleLayout.astro
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <article class="max-w-4xl mx-auto px-4 py-8">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold mb-2">{frontmatter.title}</h1>
+      {
+        frontmatter.subtitle && (
+          <p class="text-xl text-gray-600 mb-4">{frontmatter.subtitle}</p>
+        )
+      }
+      <div class="flex items-center gap-4">
+        <span class="badge bg-blue-800 text-white px-3 py-1 rounded">
+          {frontmatter.category}
+        </span>
+        <time datetime={frontmatter.date}>
+          {new Date(frontmatter.date).toLocaleDateString()}
+        </time>
+      </div>
+    </header>
+
+    {
+      frontmatter.image && (
+        <img
+          src={frontmatter.image.url}
+          alt={frontmatter.image.alt}
+          class="rounded-lg mb-8 w-full"
+        />
+      )
+    }
+
+    <div class="prose prose-lg max-w-none">
+      <slot />
+    </div>
+
+    <footer class="mt-8 pt-4 border-t">
+      <div class="flex gap-2">
+        {
+          frontmatter.tags.map((tag) => (
+            <span class="px-2 py-1 bg-gray-100 rounded">{tag}</span>
+          ))
+        }
+      </div>
+    </footer>
+  </article>
+</Layout>
