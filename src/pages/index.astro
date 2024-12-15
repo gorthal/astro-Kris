@@ -1,0 +1,338 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../layouts/CardLayout.astro";
+
+const { frontmatter } = Astro.props;
+import "/output.css";
+---
+
+<Layout
+  title="Résistance! - Le jeu de rôle"
+  description="Découvrez le jeu de rôle Résistance!"
+>
+  <div class="prose max-w-none">
+    <h1 class="text-3xl font-bold mb-6">Résistance!</h1>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">À propos du jeu</h2>
+      <p class="mb-4">Votre contenu à propos du jeu...</p>
+    </section>
+  </div>
+</Layout>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Le Bazar de Kris</title>
+  </head>
+  <body>
+    <div class="bg-gradient-to-r from-yellow-400 to-amber-500">
+      <div class="flex flex-col gap-3">
+        <a href="https://social.krisdoc.net"
+          ><img
+            src="avatar.png"
+            class="object-cover w-14 h-14 rounded-full m-auto"
+            alt="User image"
+            id="user_image"
+          /></a
+        >
+      </div>
+    </div>
+
+    <div class="bg-gray-50 py-24 sm:py-32">
+      <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <p
+          class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl"
+        >
+          Le Bazar de Kris
+        </p>
+      </div>
+    </div>
+  </body>
+
+  <div class="divider bg-warning">
+    <h2
+      class="mb-1 text-3xl font-extrabold leading-tight text-gray-900 text-center"
+    >
+      A la Une
+    </h2>
+  </div>
+
+  <div
+    class="grid grid-cols-3 gap-4 font-mono text-white text-sm text-center font-bold leading-6 bg-stripes-indigo rounded-lg"
+  >
+    <div class="card border rounded-xl border-yellow-600 text-center">
+      <div class="card-body bg-blue-700 rounded-lg text-center">
+        <h2 class="card-header text-white">Résistance!</h2>
+
+        <p class="text-content2 text-white text-center">
+          Résistance! est un jeu de rôle propulsé par l'Apocalypse où on incarne
+          une cellule de rebelles en lutte contre un empire tyrannique.
+        </p>
+        <div class="card-footer">
+          <button class="btn btn-outline btn-block"
+            ><a href="/resistance">Résistance</a></button
+          >
+        </div>
+      </div>
+    </div>
+    <div class="card border rounded-xl border-yellow-600 text-center">
+      <div class="card-body bg-red-500 rounded-lg text-center">
+        <h2 class="card-header text-white">Réforme et Rapière</h2>
+
+        <p class="text-content2 text-white text-center">
+          Une version allégée du système de Te Deum pour un massacre qui donne
+          la part belle à la narration plutôt qu'aux règles.
+        </p>
+        <div class="card-footer">
+          <button class="btn btn-outline btn-block">Infos</button>
+        </div>
+      </div>
+    </div>
+    <div class="card border rounded-xl border-yellow-600 text-center">
+      <div class="card-body bg-purple-500 rounded-lg text-center">
+        <h2 class="card-header text-white">Un quartier parisien</h2>
+
+        <p class="text-content2 text-white justify-center">
+          Un scénario pour jouer une romance entre PJ à Paris en août 1572 à la
+          veille du massacre de la Saint-Barthélémy .
+        </p>
+        <div class="card-footer">
+          <button class="btn btn-outline btn-block">Infos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider bg-warning">
+    <h2
+      class="mb-1 text-3xl font-extrabold leading-tight text-gray-900 text-center"
+    >
+      Catégories
+    </h2>
+  </div>
+
+  <div
+    class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5"
+  >
+    <div class="w-full">
+      <div class="flex flex-col w-full mb-10 sm:flex-row">
+        <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+          <div class="relative h-full ml-0 mr-0 sm:mr-10">
+            <span
+              class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-500 rounded-lg"
+            ></span>
+            <div
+              class="relative h-full p-5 bg-white border-2 border-blue-500 rounded-lg"
+            >
+              <div class="flex items-center -mt-1">
+                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">
+                  Jeu complet
+                </h3>
+              </div>
+              <p
+                class="mt-3 mb-1 text-xs font-medium text-indigo-500 uppercase"
+              >
+                ------------
+              </p>
+              <p class="mb-2 text-gray-600">
+                Ces créations consistuent des ouvrages qui se suffisent à
+                eux-mêmes, sans besoin d'autres documents ou livres.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full sm:w-1/2">
+          <div class="relative h-full ml-0 md:mr-10">
+            <span
+              class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-purple-500 rounded-lg"
+            ></span>
+            <div
+              class="relative h-full p-5 bg-white border-2 border-purple-500 rounded-lg"
+            >
+              <div class="flex items-center -mt-1">
+                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">
+                  Aides de jeu
+                </h3>
+              </div>
+              <p
+                class="mt-3 mb-1 text-xs font-medium text-purple-500 uppercase"
+              >
+                ------------
+              </p>
+              <p class="mb-2 text-gray-600">
+                Ces créations vous permettent d'approfondir les thématiques d'un
+                jeu donné, qui est nécessaire pour les utiliser, ou proposent
+                des éléments de contexte non liés à un jeu particulier.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col w-full mb-5 sm:flex-row">
+        <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+          <div class="relative h-full ml-0 mr-0 sm:mr-10">
+            <span
+              class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-red-400 rounded-lg"
+            ></span>
+            <div
+              class="relative h-full p-5 bg-white border-2 border-red-400 rounded-lg"
+            >
+              <div class="flex items-center -mt-1">
+                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">
+                  Supplément de règles
+                </h3>
+              </div>
+              <p class="mt-3 mb-1 text-xs font-medium text-blue-400 uppercase">
+                ------------
+              </p>
+              <p class="mb-2 text-gray-600">
+                Ces créations proposent d'approfondir le système d'un jeu
+                particulier, qui est nécessaire pour leur bonne compréhension et
+                usage.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+          <div class="relative h-full ml-0 mr-0 sm:mr-10">
+            <span
+              class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"
+            ></span>
+            <div
+              class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg"
+            >
+              <div class="flex items-center -mt-1">
+                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">
+                  Fiction interactive
+                </h3>
+              </div>
+              <p
+                class="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase"
+              >
+                ------------
+              </p>
+              <p class="mb-2 text-gray-600">
+                Ces créations vous emmènent dans leur univers où le gameplay
+                passe par l'usage de l'outil informatique.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full sm:w-1/2">
+          <div class="relative h-full ml-0 md:mr-10">
+            <span
+              class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"
+            ></span>
+            <div
+              class="relative h-full p-5 bg-white border-2 border-green-500 rounded-lg"
+            >
+              <div class="flex items-center -mt-1">
+                <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">
+                  Ressources
+                </h3>
+              </div>
+              <p class="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">
+                ------------
+              </p>
+              <p class="mb-2 text-gray-600">
+                Ces créations vous donnent des éléments de nature variés pour
+                faciliter vos parties.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- source:https://tailwind.besoeasy.com -->
+
+  <div class="divider bg-warning">
+    <h2
+      class="mb-1 text-3xl font-extrabold leading-tight text-gray-900 text-center"
+    >
+      Tous les Projets
+    </h2>
+  </div>
+
+  <div class="flex items-center flex-wrap -mb-4 -mx-2">
+    <div class="w-full sm:w-1/2 md:w-1/3 mb-4 px-2">
+      <Card>
+        <p slot="titre">Résistance!</p>
+        <p slot="image"><img src="resistance.png" alt="résistance" /></p>
+        <p slot="contenu">
+          Résistance! est un jeu de rôle propulsé par l'Apocalypse où on incarne
+          une cellule de rebelles en lutte contre un empire tyrannique.
+        </p>
+        <p slot="lien"><a href="src/pages/projets/projetA.md">Infos</a></p>
+        <p slot="categorie">
+          <span class="badge bg-blue-800 text-white">Jeu complet</span>
+        </p>
+      </Card>
+    </div>
+
+    <div class="w-full sm:w-1/2 md:w-1/3 mb-4 px-2">
+      <Card>
+        <p slot="titre">Capsules</p>
+        <p slot="image"><img src="capsules.jpg" alt="capsules" /></p>
+        <p slot="contenu">
+          Capsules vous propose de courts contextes de jeu prêts à jouer sous
+          forme de marques-page.
+        </p>
+        <p slot="lien"><a href="src/pages/projets/projetA.md">Infos</a></p>
+        <p slot="categorie">
+          <span class="badge bg-purple-500 text-white">Aides de jeu</span>
+        </p>
+      </Card>
+    </div>
+    <div class="w-full sm:w-1/2 md:w-1/3 mb-4 px-2">
+      <Card>
+        <p slot="titre">Un quartier parisien</p>
+        <p slot="image"><img src="quartier.jpg" alt="quartier" /></p>
+        <p slot="contenu">
+          Un scénario pour jouer une romance entre PJ à Paris en août 1572 à la
+          veille du massacre de la Saint-Barthélémy .
+        </p>
+        <p slot="lien"><a href="src/pages/projets/projetA.md">Infos</a></p>
+        <p slot="categorie">
+          <span class="badge bg-purple-500 text-white">Aides de jeu</span>
+        </p>
+      </Card>
+    </div>
+    <div class="w-full sm:w-1/2 md:w-1/3 mb-4 px-2">
+      <Card>
+        <p slot="titre">Leirville</p>
+        <p slot="image"><img src="leirville.jpg" alt="leirville" /></p>
+        <p slot="contenu">Déjouez des complots pour votre Souveraine</p>
+        <p slot="lien"><a href="src/pages/projets/projetA.md">Infos</a></p>
+        <p slot="categorie">
+          <span class="badge bg-blue-800 text-white">Jeu complet</span>
+        </p>
+      </Card>
+    </div>
+    <div class="w-full sm:w-1/2 md:w-1/3 mb-4 px-2">
+      <Card>
+        <p slot="titre">Clair Comme Cristal</p>
+        <p slot="image"><img src="clair.jpg" alt="clair" /></p>
+        <p slot="contenu">
+          Un système de jeu léger et facile à prendre en main
+        </p>
+        <p slot="lien"><a href="src/pages/projets/projetA.md">Infos</a></p>
+        <p slot="categorie">
+          <span class="badge bg-red-400 text-white">Supplément de règles</span>
+        </p>
+      </Card>
+    </div>
+    <div class="w-full sm:w-1/2 md:w-1/3 mb-4 px-2">
+      <Card>
+        <p slot="titre">Octavius</p>
+        <p slot="image"><img src="octavius.jpg" alt="octavius" /></p>
+        <p slot="contenu">Un jeu de gestion de ressources</p>
+        <p slot="lien"><a href="src/pages/projets/projetA.md">Infos</a></p>
+        <p slot="categorie">
+          <span class="badge bg-blue-800 text-white">Jeu complet</span>
+        </p>
+      </Card>
+    </div>
+  </div>
+</html>

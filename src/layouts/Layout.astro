@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Description par défaut" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="bg-blue-700 text-white p-4">
+      <nav class="container mx-auto">
+        <a href="/" class="text-xl font-bold">Mon Site</a>
+        <!-- Ajoutez votre navigation ici -->
+      </nav>
+    </header>
+
+    <main class="container mx-auto p-4">
+      <!-- Le slot permet d'insérer le contenu de chaque page -->
+      <slot />
+    </main>
+
+    <footer class="bg-gray-100 p-4 mt-8">
+      <div class="container mx-auto text-center">© 2024 Mon Site</div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  @import "../input.css";
+
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
